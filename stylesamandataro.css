@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff0cf;
+  color: #000;
+  line-height: 1.6;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+nav {
+  background-color: #fff0cf;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo-img {
+  height: 50px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.menu-link {
+  color: #0e0e0e;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 2px;
+}
+.menu-link:hover {
+  text-decoration: none;
+}
+.menu-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.3s;
+  pointer-events: none;
+}
+.menu-link:hover::after {
+  width: 100%;
+}
+.whatsapp-link {
+  background-color: #25d366;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.whatsapp-link:hover {
+  background-color: #1ebe5d;
+}
+.section-spacing {
+  padding: 60px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section[id] {
+  scroll-margin-top: 100px;
+}
+.section-anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.section-anchor#sobre {
+  flex-direction: row;
+}
+.texto-inicio,
+.texto-sobre {
+  background: #fff0cf;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  flex: 1;
+  max-width: 900px;
+}
+.texto-inicio h1,
+.texto-sobre h2 {
+  font-size: 1.2em;
+  text-align: center;
+}
+.texto-inicio p,
+.texto-sobre p {
+  margin-top: 15px;
+  text-align: justify;
+}
+.imagem-inicio,
+.imagem-sobre {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.imagem1,
+.imagem2 {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.imagem1:hover,
+.imagem2:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.section-spacing h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.carousel-container {
+  position: relative;
+  max-width: 45%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-card {
+  background: #fdf5e6;
+  border: 1px solid #d4b28c;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  flex-shrink: 0;
+  padding: 24px;
+  min-height: 420px;
+  margin: 0 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+.card-img {
+  width: 50%;
+  margin: 0 auto;
+  height: 180px;
+  border-radius: 90px;
+  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto;
+}
+.carousel-card h3 {
+  color: #5c3a21;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+.carousel-card p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: justify;
+}
+.carousel-card p.valor {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: auto;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.prev-button {
+  left: 1px;
+}
+.next-button {
+  right: 1px;
+}
+.is-hidden {
+  display: none;
+}
+#contato {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo-zap,
+.logo-email {
+  height: 30px;
+  margin: 10px;
+  vertical-align: middle;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  body {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-img {
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .whatsapp-link {
+    margin-top: 10px;
+  }
+}
