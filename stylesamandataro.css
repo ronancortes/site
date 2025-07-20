@@ -252,4 +252,29 @@ a:hover {
   .whatsapp-link {
     margin-top: 10px;
   }
+
+  /* --- NOVAS REGRAS AQUI --- */
+
+  /* Configuração para foto em cima e texto embaixo */
+  .section-anchor {
+    flex-direction: column; /* Altera a direção do flexbox para coluna */
+    text-align: center;
+  }
+
+  .texto-inicio,
+  .texto-sobre {
+    width: 100%; /* Garante que o texto ocupe toda a largura */
+  }
+
+  .imagem1,
+  .imagem2 {
+    width: 80%; /* Aumenta a imagem para ocupar mais espaço */
+    max-width: 400px; /* Mantém o limite para não ficar muito grande */
+    margin-bottom: 20px; /* Adiciona espaço entre a imagem e o texto */
+  }
+
+  /* Configuração dos cards para tela cheia */
+  .carousel-container {
+    max-width: 90%; /* Ocupa quase toda a largura da tela */
+  }
 }
