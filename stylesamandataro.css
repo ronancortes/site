@@ -86,9 +86,7 @@ section[id] {
   align-items: center;
   gap: 5px;
 }
-.section-anchor#sobre {
-  flex-direction: row;
-}
+
 .texto-inicio,
 .texto-sobre {
   background: #fff0cf;
@@ -246,7 +244,7 @@ a:hover {
 
   /* Faz a navegação ficar em coluna: Logo e botão em cima */
   .nav-container {
-    padding: 20px 0;
+    padding: 10px 10;
     justify-content: flex-start;
   }
 
@@ -255,6 +253,10 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  .logo-img {
+    height: 80px; /* Aumentei o tamanho do logo */
   }
 
   .nav-links-mobile {
@@ -307,10 +309,11 @@ a:hover {
 
   .imagem-inicio,
   .imagem-sobre {
-    order: -1; /* Força a imagem a ser o primeiro elemento da coluna */
-    width: 80%;
-    max-width: 400px;
+    order: -1;
+    width: 150vw; /* Largura da viewport para ir até as bordas */
+    max-width: none; /* Remova o max-width para permitir largura total */
     margin-bottom: 20px;
+    border-radius: 0;
   }
 
   .texto-inicio,
