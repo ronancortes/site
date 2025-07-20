@@ -277,6 +277,7 @@ a:hover {
 /* Regras para telas de celular */
 @media (max-width: 768px) {
   body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     padding-left: 5vw;
     padding-right: 5vw;
   }
