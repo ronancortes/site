@@ -164,7 +164,7 @@ section[id] {
   border-radius: 90px;
   margin-bottom: 15px;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto;
 }
 .carousel-card h3 {
   color: #5c3a21;
@@ -227,54 +227,101 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Regras para telas maiores */
+@media (min-width: 769px) {
+  .nav-header,
+  .nav-links-mobile,
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Regras para telas de celular */
 @media (max-width: 768px) {
   body {
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
+  /* Faz a navegação ficar em coluna: Logo e botão em cima */
   .nav-container {
-    flex-direction: column;
+    padding: 20px 0;
+    justify-content: flex-start;
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+  }
+
+  .nav-links-mobile {
+    display: none; /* Esconde os links por padrão */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    align-items: flex-start;
     gap: 15px;
   }
 
-  .logo-img {
-    margin-bottom: 10px;
+  /* Classe que será ativada pelo JavaScript para mostrar o menu */
+  .nav-links-mobile.show {
+    display: flex; /* Mostra os links */
   }
 
-  .nav-links {
+  .menu-toggle {
+    display: flex; /* Mostra o botão hambúrguer */
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
   }
 
-  .whatsapp-link {
-    margin-top: 10px;
+  .menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
 
-  /* --- NOVAS REGRAS AQUI --- */
+  /* Esconde os links de desktop no celular */
+  .nav-links {
+    display: none;
+  }
 
-  /* Configuração para foto em cima e texto embaixo */
+  /*
+   * Configuração para a imagem ir para o topo
+   */
   .section-anchor {
-    flex-direction: column; /* Altera a direção do flexbox para coluna */
+    flex-direction: column;
     text-align: center;
+  }
+
+  .imagem-inicio,
+  .imagem-sobre {
+    order: -1; /* Força a imagem a ser o primeiro elemento da coluna */
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
   }
 
   .texto-inicio,
   .texto-sobre {
-    width: 100%; /* Garante que o texto ocupe toda a largura */
-  }
-
-  .imagem1,
-  .imagem2 {
-    width: 80%; /* Aumenta a imagem para ocupar mais espaço */
-    max-width: 400px; /* Mantém o limite para não ficar muito grande */
-    margin-bottom: 20px; /* Adiciona espaço entre a imagem e o texto */
+    order: 0; /* O valor padrão garante que o texto venha depois da imagem */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   /* Configuração dos cards para tela cheia */
   .carousel-container {
-    max-width: 90%; /* Ocupa quase toda a largura da tela */
+    max-width: 90%;
   }
 }

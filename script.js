@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Código para o Carrossel
   const carousels = document.querySelectorAll(".carousel-container");
 
   carousels.forEach((carousel) => {
@@ -56,4 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Código para o Menu Hambúrguer
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinksMobile = document.querySelector('.nav-links-mobile');
+
+  if (menuToggle && navLinksMobile) {
+    menuToggle.addEventListener('click', () => {
+      navLinksMobile.classList.toggle('show');
+    });
+  }
 });
