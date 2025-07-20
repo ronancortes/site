@@ -5,15 +5,13 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   background-color: #fff0cf;
   color: #000;
   line-height: 1.6;
-  padding-left: 10vw;
-  padding-right: 10vw;
 }
 nav {
-  background-color: #fff0cf;
+  background-color: #eff3b6;
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -27,6 +25,8 @@ nav {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 .logo-img {
   height: 50px;
@@ -73,12 +73,12 @@ nav {
   background-color: #1ebe5d;
 }
 .section-spacing {
-  padding: 60px 0;
+  padding: 60px 10vw;
   max-width: 1200px;
   margin: 0 auto;
 }
 section[id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
 }
 .section-anchor {
   display: flex;
@@ -87,8 +87,7 @@ section[id] {
   gap: 5px;
 }
 
-.texto-inicio,
-.texto-sobre {
+.texto-inicio {
   background: #fff0cf;
   padding: 5px;
   border-radius: 8px;
@@ -96,11 +95,23 @@ section[id] {
   flex: 1;
   max-width: 900px;
 }
+
+.texto-sobre {
+  background: #f1baa1;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  flex: 1;
+  max-width: 900px;
+}
+
 .texto-inicio h1,
 .texto-sobre h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   text-align: center;
+  font-family: "MonteCarlo", cursive;
 }
+
 .texto-inicio p,
 .texto-sobre p {
   margin-top: 15px;
@@ -114,7 +125,7 @@ section[id] {
 }
 .imagem1,
 .imagem2 {
-  width: 50%;
+  width: 70%;
   max-width: 400px;
   border-radius: 50px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -129,6 +140,7 @@ section[id] {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .carousel-container {
   position: relative;
   max-width: 45%;
@@ -228,7 +240,6 @@ a:hover {
 
 /* Regras para telas maiores */
 @media (min-width: 769px) {
-  .nav-header,
   .nav-links-mobile,
   .menu-toggle {
     display: none;
@@ -327,4 +338,24 @@ a:hover {
   .carousel-container {
     max-width: 90%;
   }
+}
+
+.faixa-inicio {
+  background-color: #fff0cf;
+}
+
+.faixa-sobre {
+  background-color: #f1baa1;
+}
+
+.faixa-tiragens {
+  background-color: #fff0cf;
+}
+
+.faixa-baralhos {
+  background-color: #fff0cf;
+}
+
+.faixa-contato {
+  background-color: #eff3b6;
 }
