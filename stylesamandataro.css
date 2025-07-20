@@ -152,10 +152,12 @@ section[id] {
   transition: transform 0.5s ease-in-out;
 }
 .carousel-card {
-  background: #fdf5e6;
-  border: 1px solid #d4b28c;
+  background-color: #d4b28c;
+  border: 1px solid #fff0cf;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais sutil para o card principal */
+  position: relative; /* Essencial para posicionar a nova camada */
+  z-index: 1; /* Garante que o card fique na frente da nova camada */
   text-align: center;
   width: 90%;
   flex-shrink: 0;
@@ -166,6 +168,30 @@ section[id] {
   word-wrap: break-word;
   display: flex;
   flex-direction: column;
+}
+
+.carousel-card::before {
+  content: ""; /* Propriedade obrigatória para pseudo-elementos */
+  position: absolute;
+  top: 10px; /* Deslocamento vertical da camada de fundo */
+  left: 10px; /* Deslocamento horizontal da camada de fundo */
+  width: 100%;
+  height: 100%;
+  background-color: #fdf5e6; /* Cor da camada de fundo. Use a cor que preferir. */
+  border-radius: inherit; /* Herda o border-radius do card pai */
+  z-index: -1; /* Posiciona a camada atrás do card principal */
+  background-image: linear-gradient(
+      rgb(248, 248, 248, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("Selo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.carousel-card:hover {
+  transform: scale(1.01); /* Pequeno efeito de zoom ao passar o mouse */
 }
 .card-img {
   width: 50%;
@@ -191,6 +217,8 @@ section[id] {
   font-size: 1.5em;
   text-align: center;
   margin-top: auto;
+  color: #111111; /* Destaca o valor */
+  font-weight: bold;
 }
 .carousel-button {
   position: absolute;
