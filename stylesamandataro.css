@@ -363,9 +363,14 @@ a:hover {
     margin-bottom: 20px;
   }
 
-  /* Configuração dos cards para tela cheia */
   .carousel-container {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .carousel-card {
+    margin: 0 10px;
+    width: 95%;
   }
 }
 
@@ -387,4 +392,23 @@ a:hover {
 
 .faixa-contato {
   background-color: #eff3b6;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li {
+  font-family: "Comic Sans MS", cursive, sans-serif !important;
+}
+
+#inicio h1,
+#sobre h2 {
+  font-family: "MonteCarlo", cursive !important;
 }
