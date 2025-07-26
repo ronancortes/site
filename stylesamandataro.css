@@ -6,16 +6,25 @@
   scroll-behavior: smooth;
 }
 
-/* Fonte padrão garantida para todo o site */
-body,
-* {
-  font-family: "Comic Sans MS", cursive, sans-serif !important;
+/* Define Comic Sans como fonte padrão para o corpo do site */
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
   background-color: #fff0cf;
   color: #000;
   line-height: 1.6;
 }
 
-/* Fonte Monte Carlo apenas para títulos específicos */
+/* Garante que outros elementos herdem a fonte ou ajusta especificamente */
+/* Remove o !important de * para permitir sobrescrita por regras mais específicas */
+* {
+  /* Pode-se remover esta regra se a herança do body for suficiente */
+  /* ou manter para resetar alguns comportamentos padrão de navegadores */
+  /* A font-family aqui não é necessária se o body já a define */
+  /* e queremos que elementos específicos possam ter outras fontes. */
+}
+
+/* Fonte Monte Carlo apenas para os títulos específicos, com !important para garantir */
+/* Use !important aqui para ter certeza que sobrescreve a regra do body, se necessário. */
 #inicio h1,
 #sobre h2 {
   font-family: "MonteCarlo", cursive !important;
@@ -111,7 +120,7 @@ section[id] {
 }
 
 .texto-inicio {
-  background: #89ec8e;
+  background: #f784c3;
   padding: 5px;
   border-radius: 8px;
   font-size: 1.2em;
