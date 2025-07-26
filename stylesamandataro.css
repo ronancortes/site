@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif !important;
   background-color: #fff0cf;
   color: #000;
   line-height: 1.6;
@@ -16,7 +16,7 @@ body {
 /* Fonte Monte Carlo apenas para títulos específicos */
 #inicio h1,
 #sobre h2 {
-  font-family: "MonteCarlo", cursive;
+  font-family: "MonteCarlo", cursive !important;
 }
 
 nav {
@@ -109,7 +109,7 @@ section[id] {
 }
 
 .texto-inicio {
-  background: #89ec8e;
+  background: #a389ec;
   padding: 5px;
   border-radius: 8px;
   font-size: 1.2em;
@@ -313,7 +313,7 @@ a:hover {
 
 @media (max-width: 768px) {
   body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
     padding-left: 5vw;
     padding-right: 5vw;
   }
