@@ -66,5 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener('click', () => {
       navLinksMobile.classList.toggle('show');
     });
-  }
-});
+    
+  // Fecha o menu mobile ao clicar em um link
+  document.querySelectorAll('.nav-links-mobile .menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinksMobile.classList.remove('show');
+    });
+  });
+}
