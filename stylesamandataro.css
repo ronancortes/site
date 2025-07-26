@@ -22,20 +22,15 @@ li {
   color: #000;
 }
 
-#inicio h1,
-#sobre h2 {
-  font-family: "MonteCarlo", cursive !important;
-}
-
 /* BACKGROUND GERAL */
 body {
-  background-color: #ffffff;
+  background-color: #fff0cf;
   line-height: 1.6;
 }
 
 /* NAVEGAÇÃO */
 nav {
-  background-color: #eff3b6;
+  background-color: #e4ac13;
   padding: 20px 0;
   position: sticky;
   top: 0;
