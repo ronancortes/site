@@ -6,7 +6,7 @@
   scroll-behavior: smooth;
 }
 
-/* Define Comic Sans como fonte padrão para o corpo do site */
+/* Define Comic Sans como fonte padrão */
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background-color: #fff0cf;
@@ -14,22 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* Garante que outros elementos herdem a fonte ou ajusta especificamente */
-/* Remove o !important de * para permitir sobrescrita por regras mais específicas */
-* {
-  /* Pode-se remover esta regra se a herança do body for suficiente */
-  /* ou manter para resetar alguns comportamentos padrão de navegadores */
-  /* A font-family aqui não é necessária se o body já a define */
-  /* e queremos que elementos específicos possam ter outras fontes. */
-}
-
-/* Fonte Monte Carlo apenas para os títulos específicos, com !important para garantir */
-/* Use !important aqui para ter certeza que sobrescreve a regra do body, se necessário. */
-#inicio h1,
-#sobre h2 {
-  font-family: "MonteCarlo", cursive !important;
-}
-
+/* NAV */
 nav {
   background-color: #eff3b6;
   padding: 20px 0;
@@ -102,6 +87,7 @@ nav {
   background-color: #1ebe5d;
 }
 
+/* Seções */
 .section-spacing {
   padding: 60px 10vw;
   max-width: 1200px;
@@ -120,7 +106,7 @@ section[id] {
 }
 
 .texto-inicio {
-  background: #f784c3;
+  background: #9ff784;
   padding: 5px;
   border-radius: 8px;
   font-size: 1.2em;
@@ -137,7 +123,6 @@ section[id] {
   max-width: 900px;
 }
 
-/* Ajuste do tamanho e alinhamento dos títulos */
 .texto-inicio h1,
 .texto-sobre h2 {
   font-size: 2em;
@@ -150,6 +135,7 @@ section[id] {
   text-align: justify;
 }
 
+/* Imagens */
 .imagem-inicio,
 .imagem-sobre {
   flex: 1;
@@ -172,11 +158,13 @@ section[id] {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Títulos */
 .section-spacing h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* Carrossel */
 .carousel-container {
   position: relative;
   max-width: 45%;
@@ -203,7 +191,6 @@ section[id] {
   min-height: 420px;
   margin: 0 20px;
   overflow-wrap: break-word;
-  word-wrap: break-word;
   display: flex;
   flex-direction: column;
 }
@@ -294,6 +281,7 @@ section[id] {
   display: none;
 }
 
+/* Contato */
 #contato {
   text-align: center;
   max-width: 1200px;
@@ -307,6 +295,7 @@ section[id] {
   vertical-align: middle;
 }
 
+/* Links */
 a {
   color: #000000;
   text-decoration: none;
@@ -316,7 +305,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Regras para telas maiores */
+/* Desktop */
 @media (min-width: 769px) {
   .nav-links-mobile,
   .menu-toggle {
@@ -324,7 +313,7 @@ a:hover {
   }
 }
 
-/* Regras para telas de celular */
+/* Mobile */
 @media (max-width: 768px) {
   body {
     font-family: "Comic Sans MS", cursive, sans-serif !important;
@@ -412,6 +401,7 @@ a:hover {
   }
 }
 
+/* Faixas */
 .faixa-inicio {
   background-color: #fff0cf;
 }
