@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateArrows(slides.length, prevButton, nextButton, 0);
   });
 
+  // Scroll suave ao clicar nos links de navegação
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       e.preventDefault();
@@ -59,18 +60,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Código para o Menu Hambúrguer
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinksMobile = document.querySelector('.nav-links-mobile');
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinksMobile = document.querySelector(".nav-links-mobile");
 
   if (menuToggle && navLinksMobile) {
-    menuToggle.addEventListener('click', () => {
-      navLinksMobile.classList.toggle('show');
+    menuToggle.addEventListener("click", () => {
+      navLinksMobile.classList.toggle("show");
     });
-    
-  // Fecha o menu mobile ao clicar em um link
-  document.querySelectorAll('.nav-links-mobile .menu-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinksMobile.classList.remove('show');
-    });
-  });
-}
+
+    // Fecha o menu mobile ao clicar em um link
+    document
+      .querySelectorAll(".nav-links-mobile .menu-link")
+      .forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinksMobile.classList.remove("show");
+        });
+      });
+  }
+}); // <<< ESSA CHAVE FINAL É ESSENCIAL!
