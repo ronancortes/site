@@ -106,7 +106,7 @@ section[id] {
 }
 
 .texto-inicio {
-  background: #9ff784;
+  background: #fff0cf;
   padding: 5px;
   border-radius: 8px;
   font-size: 1.2em;
@@ -121,6 +121,12 @@ section[id] {
   font-size: 1.2em;
   flex: 1;
   max-width: 900px;
+}
+
+/* ADICIONADO: Fonte Monte Carlo para h1 da seção Início e h2 da seção Sobre */
+#inicio h1,
+#sobre h2 {
+  font-family: "MonteCarlo", cursive !important;
 }
 
 .texto-inicio h1,
