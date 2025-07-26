@@ -1,15 +1,39 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  background-color: #fff0cf;
+
+/* TIPOGRAFIA GLOBAL */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li {
+  font-family: "Comic Sans MS", cursive, sans-serif !important;
   color: #000;
+}
+
+#inicio h1,
+#sobre h2 {
+  font-family: "MonteCarlo", cursive !important;
+}
+
+/* BACKGROUND GERAL */
+body {
+  background-color: #fff0cf;
   line-height: 1.6;
 }
+
+/* NAVEGAÇÃO */
 nav {
   background-color: #eff3b6;
   padding: 20px 0;
@@ -43,8 +67,8 @@ nav {
   position: relative;
   padding-bottom: 2px;
 }
-.menu-link:hover {
-  text-decoration: none;
+.menu-link:hover::after {
+  width: 100%;
 }
 .menu-link::after {
   content: "";
@@ -58,9 +82,6 @@ nav {
   transition: width 0.3s;
   pointer-events: none;
 }
-.menu-link:hover::after {
-  width: 100%;
-}
 .whatsapp-link {
   background-color: #25d366;
   color: white;
@@ -72,6 +93,8 @@ nav {
 .whatsapp-link:hover {
   background-color: #1ebe5d;
 }
+
+/* SEÇÕES */
 .section-spacing {
   padding: 60px 10vw;
   max-width: 1200px;
@@ -87,7 +110,9 @@ section[id] {
   gap: 5px;
 }
 
-.texto-inicio {
+/* TEXTO DAS SEÇÕES */
+.texto-inicio,
+.texto-sobre {
   background: #fff0cf;
   padding: 5px;
   border-radius: 8px;
@@ -95,28 +120,21 @@ section[id] {
   flex: 1;
   max-width: 900px;
 }
-
 .texto-sobre {
   background: #f1baa1;
-  padding: 5px;
-  border-radius: 8px;
-  font-size: 1.2em;
-  flex: 1;
-  max-width: 900px;
 }
-
-.texto-inicio h1,
-.texto-sobre h2 {
-  font-size: 2em;
-  text-align: center;
-  font-family: "MonteCarlo", cursive;
-}
-
 .texto-inicio p,
 .texto-sobre p {
   margin-top: 15px;
   text-align: justify;
 }
+.texto-inicio h1,
+.texto-sobre h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* IMAGENS DAS SEÇÕES */
 .imagem-inicio,
 .imagem-sobre {
   flex: 1;
@@ -136,11 +154,14 @@ section[id] {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
+
+/* TÍTULOS */
 .section-spacing h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* CARROSSEL */
 .carousel-container {
   position: relative;
   max-width: 45%;
@@ -155,33 +176,30 @@ section[id] {
   background-color: #d4b28c;
   border: 1px solid #fff0cf;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais sutil para o card principal */
-  position: relative; /* Essencial para posicionar a nova camada */
-  z-index: 1; /* Garante que o card fique na frente da nova camada */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
   text-align: center;
   width: 90%;
   flex-shrink: 0;
   padding: 24px;
   min-height: 420px;
   margin: 0 20px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
   display: flex;
   flex-direction: column;
 }
-
 .carousel-card::before {
-  content: ""; /* Propriedade obrigatória para pseudo-elementos */
+  content: "";
   position: absolute;
-  top: 10px; /* Deslocamento vertical da camada de fundo */
-  left: 10px; /* Deslocamento horizontal da camada de fundo */
+  top: 10px;
+  left: 10px;
   width: 100%;
   height: 100%;
-  background-color: #fdf5e6; /* Cor da camada de fundo. Use a cor que preferir. */
-  border-radius: inherit; /* Herda o border-radius do card pai */
-  z-index: -1; /* Posiciona a camada atrás do card principal */
+  background-color: #fdf5e6;
+  border-radius: inherit;
+  z-index: -1;
   background-image: linear-gradient(
-      rgb(248, 248, 248, 0.9),
+      rgba(248, 248, 248, 0.9),
       rgba(255, 255, 255, 0.9)
     ),
     url("Selo.png");
@@ -189,18 +207,14 @@ section[id] {
   background-position: center center;
   background-size: contain;
 }
-
 .carousel-card:hover {
-  transform: scale(1.01); /* Pequeno efeito de zoom ao passar o mouse */
+  transform: scale(1.01);
 }
 .card-img {
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
   height: 180px;
   border-radius: 10px;
-  margin-bottom: 15px;
-  display: block;
-  margin: 0 auto;
 }
 .carousel-card h3 {
   color: #5c3a21;
@@ -217,7 +231,7 @@ section[id] {
   font-size: 1.5em;
   text-align: center;
   margin-top: auto;
-  color: #111111; /* Destaca o valor */
+  color: #111111;
   font-weight: bold;
 }
 .carousel-button {
@@ -247,6 +261,8 @@ section[id] {
 .is-hidden {
   display: none;
 }
+
+/* CONTATO */
 #contato {
   text-align: center;
   max-width: 1200px;
@@ -258,6 +274,8 @@ section[id] {
   margin: 10px;
   vertical-align: middle;
 }
+
+/* LINKS */
 a {
   color: #000000;
   text-decoration: none;
@@ -266,7 +284,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Regras para telas maiores */
+/* FAIXAS COLORIDAS (CLASSES) */
+.faixa-inicio {
+  background-color: #fff0cf;
+}
+.faixa-sobre {
+  background-color: #f1baa1;
+}
+.faixa-tiragens {
+  background-color: #fff0cf;
+}
+.faixa-baralhos {
+  background-color: #fff0cf;
+}
+.faixa-contato {
+  background-color: #eff3b6;
+}
+
+/* RESPONSIVO - DESKTOP */
 @media (min-width: 769px) {
   .nav-links-mobile,
   .menu-toggle {
@@ -274,17 +309,15 @@ a:hover {
   }
 }
 
-/* Regras para telas de celular */
+/* RESPONSIVO - CELULAR */
 @media (max-width: 768px) {
   body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
-  /* Faz a navegação ficar em coluna: Logo e botão em cima */
   .nav-container {
-    padding: 10px 10;
+    padding: 10px;
     justify-content: flex-start;
   }
 
@@ -296,11 +329,11 @@ a:hover {
   }
 
   .logo-img {
-    height: 80px; /* Aumentei o tamanho do logo */
+    height: 80px;
   }
 
   .nav-links-mobile {
-    display: none; /* Esconde os links por padrão */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 15px;
@@ -308,13 +341,12 @@ a:hover {
     gap: 15px;
   }
 
-  /* Classe que será ativada pelo JavaScript para mostrar o menu */
   .nav-links-mobile.show {
-    display: flex; /* Mostra os links */
+    display: flex;
   }
 
   .menu-toggle {
-    display: flex; /* Mostra o botão hambúrguer */
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 24px;
@@ -334,14 +366,10 @@ a:hover {
     transition: all 0.3s ease;
   }
 
-  /* Esconde os links de desktop no celular */
   .nav-links {
     display: none;
   }
 
-  /*
-   * Configuração para a imagem ir para o topo
-   */
   .section-anchor {
     flex-direction: column;
     text-align: center;
@@ -350,15 +378,15 @@ a:hover {
   .imagem-inicio,
   .imagem-sobre {
     order: -1;
-    width: 150vw; /* Largura da viewport para ir até as bordas */
-    max-width: none; /* Remova o max-width para permitir largura total */
+    width: 150vw;
+    max-width: none;
     margin-bottom: 20px;
     border-radius: 0;
   }
 
   .texto-inicio,
   .texto-sobre {
-    order: 0; /* O valor padrão garante que o texto venha depois da imagem */
+    order: 0;
     width: 100%;
     margin-bottom: 20px;
   }
@@ -372,43 +400,4 @@ a:hover {
     margin: 0 10px;
     width: 95%;
   }
-}
-
-.faixa-inicio {
-  background-color: #fff0cf;
-}
-
-.faixa-sobre {
-  background-color: #f1baa1;
-}
-
-.faixa-tiragens {
-  background-color: #fff0cf;
-}
-
-.faixa-baralhos {
-  background-color: #fff0cf;
-}
-
-.faixa-contato {
-  background-color: #eff3b6;
-}
-
-body,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-span,
-li {
-  font-family: "Comic Sans MS", cursive, sans-serif !important;
-}
-
-#inicio h1,
-#sobre h2 {
-  font-family: "MonteCarlo", cursive !important;
 }
