@@ -6,7 +6,9 @@
   scroll-behavior: smooth;
 }
 
-body {
+/* Fonte padrão garantida para todo o site */
+body,
+* {
   font-family: "Comic Sans MS", cursive, sans-serif !important;
   background-color: #fff0cf;
   color: #000;
@@ -109,7 +111,7 @@ section[id] {
 }
 
 .texto-inicio {
-  background: #a389ec;
+  background: #89ec8e;
   padding: 5px;
   border-radius: 8px;
   font-size: 1.2em;
@@ -126,6 +128,7 @@ section[id] {
   max-width: 900px;
 }
 
+/* Ajuste do tamanho e alinhamento dos títulos */
 .texto-inicio h1,
 .texto-sobre h2 {
   font-size: 2em;
@@ -304,6 +307,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Regras para telas maiores */
 @media (min-width: 769px) {
   .nav-links-mobile,
   .menu-toggle {
@@ -311,6 +315,7 @@ a:hover {
   }
 }
 
+/* Regras para telas de celular */
 @media (max-width: 768px) {
   body {
     font-family: "Comic Sans MS", cursive, sans-serif !important;
