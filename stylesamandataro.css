@@ -294,11 +294,6 @@ section[id] {
   margin: 0 auto;
 }
 
-.contato-link {
-  display: block;
-  margin-bottom: 10px;
-}
-
 .logo-zap,
 .logo-email {
   height: 30px;
@@ -407,48 +402,33 @@ a:hover {
     margin-bottom: 20px;
   }
 
-  /*
-   * CORREÇÕES APLICADAS APENAS PARA MOBILE
-   */
+  /* --- INÍCIO DAS ALTERAÇÕES --- */
 
-  /* 1. Corrigindo a rolagem do menu para compensar a barra de navegação */
+  /* Correção de rolagem: Garante que a seção fique visível abaixo da nav-bar fixa */
   section[id] {
-    /* Valor de 90px é mais adequado para a altura da nav-bar mobile */
-    scroll-margin-top: 90px;
+    scroll-margin-top: 300px;
   }
 
-  /* 2. Corrigindo o layout do carrossel para ficar mais largo e alinhado */
+  /* Correção do carrossel: Deixa o contêiner do carrossel mais largo */
   .carousel-container {
-    /* Garante que o contêiner do carrossel preencha a largura total do body */
     width: 100%;
     max-width: none;
     margin: 40px auto;
+    /* Adiciona um padding nas laterais para alinhar com o conteúdo do body */
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
-  /* 3. Corrigindo a largura e o espaçamento dos cards para evitar que o próximo card apareça */
+  /* Correção dos cards: Diminui a margem para que os cards fiquem mais próximos das bordas */
   .carousel-card {
-    /* 100% da largura do carousel-track, com espaçamento adequado */
     width: 100%;
     /* Adiciona uma margem apenas à direita para separar os cards */
-    margin-right: 5vw;
-    /* Alinha o card com o padding do body */
-    margin-left: 5vw;
+    margin-right: 20px;
+    /* Alinha o card na borda esquerda do container */
+    margin-left: 0;
   }
 
-  /* 4. Ajusta os botões de navegação para ficarem nas bordas da tela */
-  .prev-button,
-  .next-button {
-    /* Z-index para garantir que fiquem sobre o card */
-    z-index: 10;
-  }
-
-  .prev-button {
-    left: 0;
-  }
-
-  .next-button {
-    right: 0;
-  }
+  /* --- FIM DAS ALTERAÇÕES --- */
 }
 
 /* Faixas */
