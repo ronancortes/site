@@ -402,9 +402,24 @@ a:hover {
     margin-bottom: 20px;
   }
 
-  .carousel-container {
-    max-width: 90%;
+  /* --- INÍCIO DAS ALTERAÇÕES --- */
+
+  /* Correção de rolagem: Garante que a seção fique visível abaixo da nav-bar fixa */
+  section[id] {
+    scroll-margin-top: 300px;
   }
+
+  /* Correção do carrossel: Deixa o contêiner do carrossel mais largo */
+  .carousel-container {
+    max-width: 95%;
+  }
+
+  /* Correção dos cards: Diminui a margem para que os cards fiquem mais próximos das bordas */
+  .carousel-card {
+    margin: 0 5px;
+  }
+
+  /* --- FIM DAS ALTERAÇÕES --- */
 }
 
 /* Faixas */
