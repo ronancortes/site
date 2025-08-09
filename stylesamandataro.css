@@ -411,7 +411,9 @@ a:hover {
 
   /* Correção do carrossel: Deixa o contêiner do carrossel mais largo */
   .carousel-container {
-    max-width: 95%;
+    max-width: 100%;
+    width: 100%;
+    margin: 40px auto;
   }
 
   /* Correção dos cards: Diminui a margem para que os cards fiquem mais próximos das bordas */
